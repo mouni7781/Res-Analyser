@@ -1,0 +1,468 @@
+2026-08-05 23:47:25 | INFO     | resume_ai.main | Starting Resume AI Analyzer backend on http://0.0.0.0:8000
+2026-08-06 00:14:24 | INFO     | resume_ai.main | Starting Resume AI Analyzer backend on http://0.0.0.0:8000
+2026-08-06 06:26:53 | INFO     | resume_ai.main | Starting Resume AI Analyzer backend on http://0.0.0.0:8000
+2026-08-06 06:28:16 | INFO     | resume_ai.main | → POST /evaluate  client=127.0.0.1
+2026-08-06 06:28:16 | INFO     | resume_ai.main | ─── /evaluate called ───────────────────────────────
+2026-08-06 06:28:16 | INFO     | resume_ai.main |   job_title        : AI ML Engineer
+2026-08-06 06:28:16 | INFO     | resume_ai.main |   min_experience   : 1 years
+2026-08-06 06:28:16 | INFO     | resume_ai.main |   required_skills  : Python, Machine Learning, Deep Learning, PyTorch, TensorFlow, OpenCV, FastAPI, REST APIs, Pandas, NumPy, Scikit-learn, SQL, Computer Vision, Data Analysis, Git, GitHub
+2026-08-06 06:28:16 | INFO     | resume_ai.main |   preferred_skills : Agentic AI, LLMs, Conversational AI, API Integration, Meta APIs, Django, Data Visualization, Jupyter Notebook, Object-Oriented Programming, Problem Solving, Communication, Analytical Thinking, Team Collaboration, Agile Development
+2026-08-06 06:28:16 | INFO     | resume_ai.main |   resume count     : 3
+2026-08-06 06:28:16 | INFO     | resume_ai.main |     file → resume_exp.pdf  content_type=application/pdf
+2026-08-06 06:28:16 | INFO     | resume_ai.main |     file → Kashyap_Resume.pdf  content_type=application/pdf
+2026-08-06 06:28:16 | INFO     | resume_ai.main |     file → Resume_ATS.pdf  content_type=application/pdf
+2026-08-06 06:28:16 | DEBUG    | resume_ai.main | Extracting text from 'resume_exp.pdf'  size=88767 bytes
+2026-08-06 06:28:16 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'resume_exp.pdf'  size=86.7 KB
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor |   PDF 'resume_exp.pdf': 2 page(s)
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor |     Page 1/2: 2063 chars
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor |     Page 2/2: 48 chars
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor | Extraction complete for 'resume_exp.pdf': 2112 chars extracted
+2026-08-06 06:28:17 | INFO     | resume_ai.main |   ✓ Extracted 2112 chars from 'resume_exp.pdf'
+2026-08-06 06:28:17 | DEBUG    | resume_ai.main | Extracting text from 'Kashyap_Resume.pdf'  size=199983 bytes
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Kashyap_Resume.pdf'  size=195.3 KB
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor |   PDF 'Kashyap_Resume.pdf': 2 page(s)
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor |     Page 1/2: 3420 chars
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor |     Page 2/2: 1612 chars
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor | Extraction complete for 'Kashyap_Resume.pdf': 5033 chars extracted
+2026-08-06 06:28:17 | INFO     | resume_ai.main |   ✓ Extracted 5033 chars from 'Kashyap_Resume.pdf'
+2026-08-06 06:28:17 | DEBUG    | resume_ai.main | Extracting text from 'Resume_ATS.pdf'  size=135829 bytes
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Resume_ATS.pdf'  size=132.6 KB
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor |   PDF 'Resume_ATS.pdf': 1 page(s)
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor |     Page 1/1: 3582 chars
+2026-08-06 06:28:17 | DEBUG    | resume_ai.extractor | Extraction complete for 'Resume_ATS.pdf': 3582 chars extracted
+2026-08-06 06:28:17 | INFO     | resume_ai.main |   ✓ Extracted 3582 chars from 'Resume_ATS.pdf'
+2026-08-06 06:28:17 | INFO     | resume_ai.main | Proceeding with 3 readable resume(s)
+2026-08-06 06:28:17 | INFO     | resume_ai.main | Starting LangGraph agent analysis …
+2026-08-06 06:28:17 | INFO     | resume_ai.agent | Initialising ResumeAnalysisAgent
+2026-08-06 06:28:17 | DEBUG    | resume_ai.agent | Building LangGraph …
+2026-08-06 06:28:17 | DEBUG    | resume_ai.agent | LangGraph compiled successfully
+2026-08-06 06:28:17 | INFO     | resume_ai.agent | ResumeAnalysisAgent.analyze — 3 candidate(s)
+2026-08-06 06:28:17 | INFO     | resume_ai.agent | ► Node: extract_job_requirements
+2026-08-06 06:28:17 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:28:17 | DEBUG    | resume_ai.agent |   Job title: AI ML Engineer
+2026-08-06 06:28:17 | DEBUG    | resume_ai.agent |   Required skills: ['Python', 'Machine Learning', 'Deep Learning', 'PyTorch', 'TensorFlow', 'OpenCV', 'FastAPI', 'REST APIs', 'Pandas', 'NumPy', 'Scikit-learn', 'SQL', 'Computer Vision', 'Data Analysis', 'Git', 'GitHub']
+2026-08-06 06:28:17 | DEBUG    | resume_ai.agent |   Min experience: 1 years
+2026-08-06 06:28:17 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] — sending request …
+2026-08-06 06:28:19 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] completed in 1643.3 ms — response 1037 chars
+2026-08-06 06:28:19 | DEBUG    | resume_ai.agent | JSON parse OK [extract_job_requirements] — 1037 chars
+2026-08-06 06:28:19 | INFO     | resume_ai.agent |   ✓ Extracted 16 core skills, min_exp=1 years
+2026-08-06 06:28:19 | INFO     | resume_ai.agent | ► Node: extract_candidate_profiles (3 resumes)
+2026-08-06 06:28:19 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:28:19 | INFO     | resume_ai.agent |   [1/3] Processing 'resume_exp.pdf' (2112 chars, truncated to 2112)
+2026-08-06 06:28:19 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] — sending request …
+2026-08-06 06:28:20 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] completed in 1973.1 ms — response 1770 chars
+2026-08-06 06:28:20 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:resume_exp.pdf] — 1770 chars
+2026-08-06 06:28:20 | INFO     | resume_ai.agent |     ✓ Name='DODDA VENKATA SAI MANVISH'  skills=18  exp=0 yrs
+2026-08-06 06:28:20 | INFO     | resume_ai.agent |   [2/3] Processing 'Kashyap_Resume.pdf' (5033 chars, truncated to 5033)
+2026-08-06 06:28:20 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] — sending request …
+2026-08-06 06:28:23 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] completed in 2087.2 ms — response 2006 chars
+2026-08-06 06:28:23 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Kashyap_Resume.pdf] — 2006 chars
+2026-08-06 06:28:23 | INFO     | resume_ai.agent |     ✓ Name='Siva Kashyap Chakravadhanula'  skills=32  exp=0.5 yrs
+2026-08-06 06:28:23 | INFO     | resume_ai.agent |   [3/3] Processing 'Resume_ATS.pdf' (3582 chars, truncated to 3582)
+2026-08-06 06:28:23 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] — sending request …
+2026-08-06 06:28:24 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] completed in 1820.8 ms — response 1761 chars
+2026-08-06 06:28:24 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Resume_ATS.pdf] — 1761 chars
+2026-08-06 06:28:24 | INFO     | resume_ai.agent |     ✓ Name='B Mouni Prakash Reddy'  skills=24  exp=0.2 yrs
+2026-08-06 06:28:24 | INFO     | resume_ai.agent |   ✓ All profiles extracted (3 total)
+2026-08-06 06:28:24 | INFO     | resume_ai.agent | ► Node: score_candidates (3 profiles)
+2026-08-06 06:28:24 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:28:24 | INFO     | resume_ai.agent |   [1/3] Scoring 'DODDA VENKATA SAI MANVISH' (resume_exp.pdf)
+2026-08-06 06:28:24 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] — sending request …
+2026-08-06 06:28:26 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] completed in 1427.1 ms — response 711 chars
+2026-08-06 06:28:26 | DEBUG    | resume_ai.agent | JSON parse OK [score:DODDA VENKATA SAI MANVISH] — 711 chars
+2026-08-06 06:28:26 | INFO     | resume_ai.agent |     ✓ score=38  recommendation='Not Recommended'  matching_skills=2
+2026-08-06 06:28:26 | INFO     | resume_ai.agent |   [2/3] Scoring 'Siva Kashyap Chakravadhanula' (Kashyap_Resume.pdf)
+2026-08-06 06:28:26 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] — sending request …
+2026-08-06 06:28:27 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] completed in 1234.9 ms — response 953 chars
+2026-08-06 06:28:27 | DEBUG    | resume_ai.agent | JSON parse OK [score:Siva Kashyap Chakravadhanula] — 953 chars
+2026-08-06 06:28:27 | INFO     | resume_ai.agent |     ✓ score=68  recommendation='Fit'  matching_skills=15
+2026-08-06 06:28:27 | INFO     | resume_ai.agent |   [3/3] Scoring 'B Mouni Prakash Reddy' (Resume_ATS.pdf)
+2026-08-06 06:28:27 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] — sending request …
+2026-08-06 06:28:28 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] completed in 1316.7 ms — response 834 chars
+2026-08-06 06:28:28 | DEBUG    | resume_ai.agent | JSON parse OK [score:B Mouni Prakash Reddy] — 834 chars
+2026-08-06 06:28:28 | INFO     | resume_ai.agent |     ✓ score=52  recommendation='Partial Fit'  matching_skills=9
+2026-08-06 06:28:28 | INFO     | resume_ai.agent |   ✓ All candidates scored (3 total)
+2026-08-06 06:28:28 | INFO     | resume_ai.agent | ► Node: rank_candidates
+2026-08-06 06:28:28 | INFO     | resume_ai.agent |   # 1  Siva Kashyap Chakravadhanula    score= 68  Fit
+2026-08-06 06:28:28 | INFO     | resume_ai.agent |   # 2  B Mouni Prakash Reddy           score= 52  Partial Fit
+2026-08-06 06:28:28 | INFO     | resume_ai.agent |   # 3  DODDA VENKATA SAI MANVISH       score= 38  Not Recommended
+2026-08-06 06:28:28 | INFO     | resume_ai.agent |   ✓ Ranking complete — top candidate: Siva Kashyap Chakravadhanula
+2026-08-06 06:28:28 | INFO     | resume_ai.agent | Graph invoke completed in 11667.6 ms
+2026-08-06 06:28:28 | INFO     | resume_ai.main | Agent finished in 11671.7 ms — 3 candidate(s) ranked
+2026-08-06 06:28:28 | INFO     | resume_ai.main |   #1 Siva Kashyap Chakravadhanula    score= 68  recommendation=Fit
+2026-08-06 06:28:28 | INFO     | resume_ai.main |   #2 B Mouni Prakash Reddy           score= 52  recommendation=Partial Fit
+2026-08-06 06:28:28 | INFO     | resume_ai.main |   #3 DODDA VENKATA SAI MANVISH       score= 38  recommendation=Not Recommended
+2026-08-06 06:28:28 | INFO     | resume_ai.main | ─── /evaluate complete ─────────────────────────────
+2026-08-06 06:28:28 | INFO     | resume_ai.main | ← POST /evaluate  status=200  11993.1 ms
+2026-08-06 06:31:59 | INFO     | resume_ai.main | → POST /evaluate  client=127.0.0.1
+2026-08-06 06:31:59 | INFO     | resume_ai.main | ─── /evaluate called ───────────────────────────────
+2026-08-06 06:31:59 | INFO     | resume_ai.main |   job_title        : Full Stack Developer
+2026-08-06 06:31:59 | INFO     | resume_ai.main |   min_experience   : 0 years
+2026-08-06 06:31:59 | INFO     | resume_ai.main |   required_skills  : JavaScript/TypeScript, HTML5, CSS3, React.js/Angular/Vue.js, Node.js, REST APIs, SQL/NoSQL databases, Git, responsive web development, problem-solving, debugging, and strong communication skills.
+2026-08-06 06:31:59 | INFO     | resume_ai.main |   preferred_skills : AWS/Azure/GCP, Docker, Kubernetes, CI/CD pipelines, microservices architecture, GraphQL, testing frameworks (Jest/Cypress), Agile/Scrum methodologies, and DevOps practices.
+2026-08-06 06:31:59 | INFO     | resume_ai.main |   resume count     : 3
+2026-08-06 06:31:59 | INFO     | resume_ai.main |     file → resume_exp.pdf  content_type=application/pdf
+2026-08-06 06:31:59 | INFO     | resume_ai.main |     file → Kashyap_Resume.pdf  content_type=application/pdf
+2026-08-06 06:31:59 | INFO     | resume_ai.main |     file → Resume_ATS.pdf  content_type=application/pdf
+2026-08-06 06:31:59 | DEBUG    | resume_ai.main | Extracting text from 'resume_exp.pdf'  size=88767 bytes
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'resume_exp.pdf'  size=86.7 KB
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor |   PDF 'resume_exp.pdf': 2 page(s)
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor |     Page 1/2: 2063 chars
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor |     Page 2/2: 48 chars
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor | Extraction complete for 'resume_exp.pdf': 2112 chars extracted
+2026-08-06 06:31:59 | INFO     | resume_ai.main |   ✓ Extracted 2112 chars from 'resume_exp.pdf'
+2026-08-06 06:31:59 | DEBUG    | resume_ai.main | Extracting text from 'Kashyap_Resume.pdf'  size=199983 bytes
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Kashyap_Resume.pdf'  size=195.3 KB
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor |   PDF 'Kashyap_Resume.pdf': 2 page(s)
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor |     Page 1/2: 3420 chars
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor |     Page 2/2: 1612 chars
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor | Extraction complete for 'Kashyap_Resume.pdf': 5033 chars extracted
+2026-08-06 06:31:59 | INFO     | resume_ai.main |   ✓ Extracted 5033 chars from 'Kashyap_Resume.pdf'
+2026-08-06 06:31:59 | DEBUG    | resume_ai.main | Extracting text from 'Resume_ATS.pdf'  size=135829 bytes
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Resume_ATS.pdf'  size=132.6 KB
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor |   PDF 'Resume_ATS.pdf': 1 page(s)
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor |     Page 1/1: 3582 chars
+2026-08-06 06:31:59 | DEBUG    | resume_ai.extractor | Extraction complete for 'Resume_ATS.pdf': 3582 chars extracted
+2026-08-06 06:31:59 | INFO     | resume_ai.main |   ✓ Extracted 3582 chars from 'Resume_ATS.pdf'
+2026-08-06 06:31:59 | INFO     | resume_ai.main | Proceeding with 3 readable resume(s)
+2026-08-06 06:31:59 | INFO     | resume_ai.main | Starting LangGraph agent analysis …
+2026-08-06 06:31:59 | INFO     | resume_ai.agent | Initialising ResumeAnalysisAgent
+2026-08-06 06:31:59 | DEBUG    | resume_ai.agent | Building LangGraph …
+2026-08-06 06:31:59 | DEBUG    | resume_ai.agent | LangGraph compiled successfully
+2026-08-06 06:31:59 | INFO     | resume_ai.agent | ResumeAnalysisAgent.analyze — 3 candidate(s)
+2026-08-06 06:31:59 | INFO     | resume_ai.agent | ► Node: extract_job_requirements
+2026-08-06 06:31:59 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:31:59 | DEBUG    | resume_ai.agent |   Job title: Full Stack Developer
+2026-08-06 06:31:59 | DEBUG    | resume_ai.agent |   Required skills: ['JavaScript/TypeScript', 'HTML5', 'CSS3', 'React.js/Angular/Vue.js', 'Node.js', 'REST APIs', 'SQL/NoSQL databases', 'Git', 'responsive web development', 'problem-solving', 'debugging', 'and strong communication skills.']
+2026-08-06 06:31:59 | DEBUG    | resume_ai.agent |   Min experience: 0 years
+2026-08-06 06:31:59 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] — sending request …
+2026-08-06 06:32:01 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] completed in 1538.4 ms — response 931 chars
+2026-08-06 06:32:01 | DEBUG    | resume_ai.agent | JSON parse OK [extract_job_requirements] — 931 chars
+2026-08-06 06:32:01 | INFO     | resume_ai.agent |   ✓ Extracted 19 core skills, min_exp=0 years
+2026-08-06 06:32:01 | INFO     | resume_ai.agent | ► Node: extract_candidate_profiles (3 resumes)
+2026-08-06 06:32:01 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:32:01 | INFO     | resume_ai.agent |   [1/3] Processing 'resume_exp.pdf' (2112 chars, truncated to 2112)
+2026-08-06 06:32:01 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] — sending request …
+2026-08-06 06:32:03 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] completed in 2085.0 ms — response 1632 chars
+2026-08-06 06:32:03 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:resume_exp.pdf] — 1632 chars
+2026-08-06 06:32:03 | INFO     | resume_ai.agent |     ✓ Name='DODDA VENKATA SAI MANVISH'  skills=17  exp=0 yrs
+2026-08-06 06:32:03 | INFO     | resume_ai.agent |   [2/3] Processing 'Kashyap_Resume.pdf' (5033 chars, truncated to 5033)
+2026-08-06 06:32:03 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] — sending request …
+2026-08-06 06:32:05 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] completed in 2066.5 ms — response 2213 chars
+2026-08-06 06:32:05 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Kashyap_Resume.pdf] — 2213 chars
+2026-08-06 06:32:05 | INFO     | resume_ai.agent |     ✓ Name='Siva Kashyap Chakravadhanula'  skills=32  exp=0.5 yrs
+2026-08-06 06:32:05 | INFO     | resume_ai.agent |   [3/3] Processing 'Resume_ATS.pdf' (3582 chars, truncated to 3582)
+2026-08-06 06:32:05 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] — sending request …
+2026-08-06 06:32:06 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] completed in 1766.2 ms — response 1775 chars
+2026-08-06 06:32:06 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Resume_ATS.pdf] — 1775 chars
+2026-08-06 06:32:06 | INFO     | resume_ai.agent |     ✓ Name='B Mouni Prakash Reddy'  skills=24  exp=0.2 yrs
+2026-08-06 06:32:06 | INFO     | resume_ai.agent |   ✓ All profiles extracted (3 total)
+2026-08-06 06:32:06 | INFO     | resume_ai.agent | ► Node: score_candidates (3 profiles)
+2026-08-06 06:32:06 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:32:06 | INFO     | resume_ai.agent |   [1/3] Scoring 'DODDA VENKATA SAI MANVISH' (resume_exp.pdf)
+2026-08-06 06:32:07 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] — sending request …
+2026-08-06 06:32:08 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] completed in 1758.6 ms — response 720 chars
+2026-08-06 06:32:08 | DEBUG    | resume_ai.agent | JSON parse OK [score:DODDA VENKATA SAI MANVISH] — 720 chars
+2026-08-06 06:32:08 | INFO     | resume_ai.agent |     ✓ score=45  recommendation='Partial Fit'  matching_skills=5
+2026-08-06 06:32:08 | INFO     | resume_ai.agent |   [2/3] Scoring 'Siva Kashyap Chakravadhanula' (Kashyap_Resume.pdf)
+2026-08-06 06:32:08 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] — sending request …
+2026-08-06 06:32:10 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] completed in 1434.2 ms — response 934 chars
+2026-08-06 06:32:10 | DEBUG    | resume_ai.agent | JSON parse OK [score:Siva Kashyap Chakravadhanula] — 934 chars
+2026-08-06 06:32:10 | INFO     | resume_ai.agent |     ✓ score=45  recommendation='Partial Fit'  matching_skills=7
+2026-08-06 06:32:10 | INFO     | resume_ai.agent |   [3/3] Scoring 'B Mouni Prakash Reddy' (Resume_ATS.pdf)
+2026-08-06 06:32:10 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] — sending request …
+2026-08-06 06:32:11 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] completed in 1108.7 ms — response 804 chars
+2026-08-06 06:32:11 | DEBUG    | resume_ai.agent | JSON parse OK [score:B Mouni Prakash Reddy] — 804 chars
+2026-08-06 06:32:11 | INFO     | resume_ai.agent |     ✓ score=68  recommendation='Fit'  matching_skills=9
+2026-08-06 06:32:11 | INFO     | resume_ai.agent |   ✓ All candidates scored (3 total)
+2026-08-06 06:32:11 | INFO     | resume_ai.agent | ► Node: rank_candidates
+2026-08-06 06:32:11 | INFO     | resume_ai.agent |   # 1  B Mouni Prakash Reddy           score= 68  Fit
+2026-08-06 06:32:11 | INFO     | resume_ai.agent |   # 2  DODDA VENKATA SAI MANVISH       score= 45  Partial Fit
+2026-08-06 06:32:11 | INFO     | resume_ai.agent |   # 3  Siva Kashyap Chakravadhanula    score= 45  Partial Fit
+2026-08-06 06:32:11 | INFO     | resume_ai.agent |   ✓ Ranking complete — top candidate: B Mouni Prakash Reddy
+2026-08-06 06:32:11 | INFO     | resume_ai.agent | Graph invoke completed in 11800.0 ms
+2026-08-06 06:32:11 | INFO     | resume_ai.main | Agent finished in 11805.6 ms — 3 candidate(s) ranked
+2026-08-06 06:32:11 | INFO     | resume_ai.main |   #1 B Mouni Prakash Reddy           score= 68  recommendation=Fit
+2026-08-06 06:32:11 | INFO     | resume_ai.main |   #2 DODDA VENKATA SAI MANVISH       score= 45  recommendation=Partial Fit
+2026-08-06 06:32:11 | INFO     | resume_ai.main |   #3 Siva Kashyap Chakravadhanula    score= 45  recommendation=Partial Fit
+2026-08-06 06:32:11 | INFO     | resume_ai.main | ─── /evaluate complete ─────────────────────────────
+2026-08-06 06:32:11 | INFO     | resume_ai.main | ← POST /evaluate  status=200  11980.4 ms
+2026-08-06 06:53:56 | INFO     | resume_ai.main | → POST /evaluate  client=127.0.0.1
+2026-08-06 06:53:56 | INFO     | resume_ai.main | ─── /evaluate called ───────────────────────────────
+2026-08-06 06:53:56 | INFO     | resume_ai.main |   job_title        : AI ML Engineer
+2026-08-06 06:53:56 | INFO     | resume_ai.main |   min_experience   : 0 years
+2026-08-06 06:53:56 | INFO     | resume_ai.main |   required_skills  : Python, Machine Learning, Deep Learning, PyTorch, TensorFlow, OpenCV, FastAPI, REST APIs, Pandas, NumPy, Scikit-learn, SQL, Computer Vision, Data Analysis, Git, GitHub
+2026-08-06 06:53:56 | INFO     | resume_ai.main |   preferred_skills : Agentic AI, LLMs, Conversational AI, API Integration, Meta APIs, Django, Data Visualization, Jupyter Notebook, Object-Oriented Programming, Problem Solving, Communication, Analytical Thinking, Team Collaboration, Agile Development
+2026-08-06 06:53:56 | INFO     | resume_ai.main |   resume count     : 3
+2026-08-06 06:53:56 | INFO     | resume_ai.main |     file → Kashyap_Resume.pdf  content_type=application/pdf
+2026-08-06 06:53:56 | INFO     | resume_ai.main |     file → Resume_ATS.pdf  content_type=application/pdf
+2026-08-06 06:53:56 | INFO     | resume_ai.main |     file → resume_exp.pdf  content_type=application/pdf
+2026-08-06 06:53:56 | DEBUG    | resume_ai.main | Extracting text from 'Kashyap_Resume.pdf'  size=199983 bytes
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Kashyap_Resume.pdf'  size=195.3 KB
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor |   PDF 'Kashyap_Resume.pdf': 2 page(s)
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor |     Page 1/2: 3420 chars
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor |     Page 2/2: 1612 chars
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor | Extraction complete for 'Kashyap_Resume.pdf': 5033 chars extracted
+2026-08-06 06:53:56 | INFO     | resume_ai.main |   ✓ Extracted 5033 chars from 'Kashyap_Resume.pdf'
+2026-08-06 06:53:56 | DEBUG    | resume_ai.main | Extracting text from 'Resume_ATS.pdf'  size=135829 bytes
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Resume_ATS.pdf'  size=132.6 KB
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor |   PDF 'Resume_ATS.pdf': 1 page(s)
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor |     Page 1/1: 3582 chars
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor | Extraction complete for 'Resume_ATS.pdf': 3582 chars extracted
+2026-08-06 06:53:56 | INFO     | resume_ai.main |   ✓ Extracted 3582 chars from 'Resume_ATS.pdf'
+2026-08-06 06:53:56 | DEBUG    | resume_ai.main | Extracting text from 'resume_exp.pdf'  size=88767 bytes
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'resume_exp.pdf'  size=86.7 KB
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor |   PDF 'resume_exp.pdf': 2 page(s)
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor |     Page 1/2: 2063 chars
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor |     Page 2/2: 48 chars
+2026-08-06 06:53:56 | DEBUG    | resume_ai.extractor | Extraction complete for 'resume_exp.pdf': 2112 chars extracted
+2026-08-06 06:53:56 | INFO     | resume_ai.main |   ✓ Extracted 2112 chars from 'resume_exp.pdf'
+2026-08-06 06:53:56 | INFO     | resume_ai.main | Proceeding with 3 readable resume(s)
+2026-08-06 06:53:56 | INFO     | resume_ai.main | Starting LangGraph agent analysis …
+2026-08-06 06:53:56 | INFO     | resume_ai.agent | Initialising ResumeAnalysisAgent
+2026-08-06 06:53:56 | DEBUG    | resume_ai.agent | Building LangGraph …
+2026-08-06 06:53:56 | DEBUG    | resume_ai.agent | LangGraph compiled successfully
+2026-08-06 06:53:56 | INFO     | resume_ai.agent | ResumeAnalysisAgent.analyze — 3 candidate(s)
+2026-08-06 06:53:56 | INFO     | resume_ai.agent | ► Node: extract_job_requirements
+2026-08-06 06:53:56 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:53:56 | DEBUG    | resume_ai.agent |   Job title: AI ML Engineer
+2026-08-06 06:53:56 | DEBUG    | resume_ai.agent |   Required skills: ['Python', 'Machine Learning', 'Deep Learning', 'PyTorch', 'TensorFlow', 'OpenCV', 'FastAPI', 'REST APIs', 'Pandas', 'NumPy', 'Scikit-learn', 'SQL', 'Computer Vision', 'Data Analysis', 'Git', 'GitHub']
+2026-08-06 06:53:56 | DEBUG    | resume_ai.agent |   Min experience: 0 years
+2026-08-06 06:53:56 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] — sending request …
+2026-08-06 06:53:58 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] completed in 1510.5 ms — response 1063 chars
+2026-08-06 06:53:58 | DEBUG    | resume_ai.agent | JSON parse OK [extract_job_requirements] — 1063 chars
+2026-08-06 06:53:58 | INFO     | resume_ai.agent |   ✓ Extracted 16 core skills, min_exp=0 years
+2026-08-06 06:53:58 | INFO     | resume_ai.agent | ► Node: extract_candidate_profiles (3 resumes)
+2026-08-06 06:53:58 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:53:58 | INFO     | resume_ai.agent |   [1/3] Processing 'Kashyap_Resume.pdf' (5033 chars, truncated to 5033)
+2026-08-06 06:53:58 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] — sending request …
+2026-08-06 06:54:01 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] completed in 2717.1 ms — response 2408 chars
+2026-08-06 06:54:01 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Kashyap_Resume.pdf] — 2408 chars
+2026-08-06 06:54:01 | INFO     | resume_ai.agent |     ✓ Name='Siva Kashyap Chakravadhanula'  skills=47  exp=0.5 yrs
+2026-08-06 06:54:01 | INFO     | resume_ai.agent |   [2/3] Processing 'Resume_ATS.pdf' (3582 chars, truncated to 3582)
+2026-08-06 06:54:01 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] — sending request …
+2026-08-06 06:54:03 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] completed in 1941.8 ms — response 1763 chars
+2026-08-06 06:54:03 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Resume_ATS.pdf] — 1763 chars
+2026-08-06 06:54:03 | INFO     | resume_ai.agent |     ✓ Name='B Mouni Prakash Reddy'  skills=24  exp=0.2 yrs
+2026-08-06 06:54:03 | INFO     | resume_ai.agent |   [3/3] Processing 'resume_exp.pdf' (2112 chars, truncated to 2112)
+2026-08-06 06:54:03 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] — sending request …
+2026-08-06 06:54:04 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] completed in 1712.0 ms — response 1733 chars
+2026-08-06 06:54:04 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:resume_exp.pdf] — 1733 chars
+2026-08-06 06:54:04 | INFO     | resume_ai.agent |     ✓ Name='DODDA VENKATA SAI MANVISH'  skills=17  exp=0 yrs
+2026-08-06 06:54:04 | INFO     | resume_ai.agent |   ✓ All profiles extracted (3 total)
+2026-08-06 06:54:04 | INFO     | resume_ai.agent | ► Node: score_candidates (3 profiles)
+2026-08-06 06:54:04 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 06:54:04 | INFO     | resume_ai.agent |   [1/3] Scoring 'Siva Kashyap Chakravadhanula' (Kashyap_Resume.pdf)
+2026-08-06 06:54:04 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] — sending request …
+2026-08-06 06:54:06 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] completed in 1679.1 ms — response 1110 chars
+2026-08-06 06:54:06 | DEBUG    | resume_ai.agent | JSON parse OK [score:Siva Kashyap Chakravadhanula] — 1110 chars
+2026-08-06 06:54:06 | INFO     | resume_ai.agent |     ✓ score=92  recommendation='Strong Fit'  matching_skills=16
+2026-08-06 06:54:06 | INFO     | resume_ai.agent |   [2/3] Scoring 'B Mouni Prakash Reddy' (Resume_ATS.pdf)
+2026-08-06 06:54:06 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] — sending request …
+2026-08-06 06:54:07 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] completed in 1260.6 ms — response 800 chars
+2026-08-06 06:54:07 | DEBUG    | resume_ai.agent | JSON parse OK [score:B Mouni Prakash Reddy] — 800 chars
+2026-08-06 06:54:07 | INFO     | resume_ai.agent |     ✓ score=68  recommendation='Fit'  matching_skills=8
+2026-08-06 06:54:07 | INFO     | resume_ai.agent |   [3/3] Scoring 'DODDA VENKATA SAI MANVISH' (resume_exp.pdf)
+2026-08-06 06:54:07 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] — sending request …
+2026-08-06 06:54:08 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] completed in 1176.5 ms — response 855 chars
+2026-08-06 06:54:08 | DEBUG    | resume_ai.agent | JSON parse OK [score:DODDA VENKATA SAI MANVISH] — 855 chars
+2026-08-06 06:54:08 | INFO     | resume_ai.agent |     ✓ score=48  recommendation='Partial Fit'  matching_skills=2
+2026-08-06 06:54:08 | INFO     | resume_ai.agent |   ✓ All candidates scored (3 total)
+2026-08-06 06:54:08 | INFO     | resume_ai.agent | ► Node: rank_candidates
+2026-08-06 06:54:08 | INFO     | resume_ai.agent |   # 1  Siva Kashyap Chakravadhanula    score= 92  Strong Fit
+2026-08-06 06:54:08 | INFO     | resume_ai.agent |   # 2  B Mouni Prakash Reddy           score= 68  Fit
+2026-08-06 06:54:08 | INFO     | resume_ai.agent |   # 3  DODDA VENKATA SAI MANVISH       score= 48  Partial Fit
+2026-08-06 06:54:08 | INFO     | resume_ai.agent |   ✓ Ranking complete — top candidate: Siva Kashyap Chakravadhanula
+2026-08-06 06:54:08 | INFO     | resume_ai.agent | Graph invoke completed in 12162.3 ms
+2026-08-06 06:54:08 | INFO     | resume_ai.main | Agent finished in 12168.2 ms — 3 candidate(s) ranked
+2026-08-06 06:54:08 | INFO     | resume_ai.main |   #1 Siva Kashyap Chakravadhanula    score= 92  recommendation=Strong Fit
+2026-08-06 06:54:08 | INFO     | resume_ai.main |   #2 B Mouni Prakash Reddy           score= 68  recommendation=Fit
+2026-08-06 06:54:08 | INFO     | resume_ai.main |   #3 DODDA VENKATA SAI MANVISH       score= 48  recommendation=Partial Fit
+2026-08-06 06:54:08 | INFO     | resume_ai.main | ─── /evaluate complete ─────────────────────────────
+2026-08-06 06:54:08 | INFO     | resume_ai.main | ← POST /evaluate  status=200  12301.0 ms
+2026-08-06 07:01:51 | INFO     | resume_ai.main | → POST /evaluate  client=127.0.0.1
+2026-08-06 07:01:51 | INFO     | resume_ai.main | ─── /evaluate called ───────────────────────────────
+2026-08-06 07:01:51 | INFO     | resume_ai.main |   job_title        : AI ML Engineer
+2026-08-06 07:01:51 | INFO     | resume_ai.main |   min_experience   : 0.5 years
+2026-08-06 07:01:51 | INFO     | resume_ai.main |   required_skills  : Python, Machine Learning, Deep Learning, PyTorch, TensorFlow, OpenCV, FastAPI, REST APIs, Pandas, NumPy, Scikit-learn, SQL, Computer Vision, Data Analysis, Git, GitHub
+2026-08-06 07:01:51 | INFO     | resume_ai.main |   preferred_skills : Agentic AI, LLMs, Conversational AI, API Integration, Meta APIs, Django, Data Visualization, Jupyter Notebook, Object-Oriented Programming, Problem Solving, Communication, Analytical Thinking, Team Collaboration, Agile Development
+2026-08-06 07:01:51 | INFO     | resume_ai.main |   resume count     : 3
+2026-08-06 07:01:51 | INFO     | resume_ai.main |     file → resume_exp.pdf  content_type=application/pdf
+2026-08-06 07:01:51 | INFO     | resume_ai.main |     file → Kashyap_Resume.pdf  content_type=application/pdf
+2026-08-06 07:01:51 | INFO     | resume_ai.main |     file → Resume_ATS.pdf  content_type=application/pdf
+2026-08-06 07:01:51 | DEBUG    | resume_ai.main | Extracting text from 'resume_exp.pdf'  size=88767 bytes
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'resume_exp.pdf'  size=86.7 KB
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor |   PDF 'resume_exp.pdf': 2 page(s)
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor |     Page 1/2: 2063 chars
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor |     Page 2/2: 48 chars
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor | Extraction complete for 'resume_exp.pdf': 2112 chars extracted
+2026-08-06 07:01:51 | INFO     | resume_ai.main |   ✓ Extracted 2112 chars from 'resume_exp.pdf'
+2026-08-06 07:01:51 | DEBUG    | resume_ai.main | Extracting text from 'Kashyap_Resume.pdf'  size=199983 bytes
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Kashyap_Resume.pdf'  size=195.3 KB
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor |   PDF 'Kashyap_Resume.pdf': 2 page(s)
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor |     Page 1/2: 3420 chars
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor |     Page 2/2: 1612 chars
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor | Extraction complete for 'Kashyap_Resume.pdf': 5033 chars extracted
+2026-08-06 07:01:51 | INFO     | resume_ai.main |   ✓ Extracted 5033 chars from 'Kashyap_Resume.pdf'
+2026-08-06 07:01:51 | DEBUG    | resume_ai.main | Extracting text from 'Resume_ATS.pdf'  size=135829 bytes
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Resume_ATS.pdf'  size=132.6 KB
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor |   PDF 'Resume_ATS.pdf': 1 page(s)
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor |     Page 1/1: 3582 chars
+2026-08-06 07:01:51 | DEBUG    | resume_ai.extractor | Extraction complete for 'Resume_ATS.pdf': 3582 chars extracted
+2026-08-06 07:01:51 | INFO     | resume_ai.main |   ✓ Extracted 3582 chars from 'Resume_ATS.pdf'
+2026-08-06 07:01:51 | INFO     | resume_ai.main | Proceeding with 3 readable resume(s)
+2026-08-06 07:01:51 | INFO     | resume_ai.main | Starting LangGraph agent analysis …
+2026-08-06 07:01:51 | INFO     | resume_ai.agent | Initialising ResumeAnalysisAgent
+2026-08-06 07:01:51 | DEBUG    | resume_ai.agent | Building LangGraph …
+2026-08-06 07:01:51 | DEBUG    | resume_ai.agent | LangGraph compiled successfully
+2026-08-06 07:01:51 | INFO     | resume_ai.agent | ResumeAnalysisAgent.analyze — 3 candidate(s)
+2026-08-06 07:01:51 | INFO     | resume_ai.agent | ► Node: extract_job_requirements
+2026-08-06 07:01:51 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 07:01:51 | DEBUG    | resume_ai.agent |   Job title: AI ML Engineer
+2026-08-06 07:01:51 | DEBUG    | resume_ai.agent |   Required skills: ['Python', 'Machine Learning', 'Deep Learning', 'PyTorch', 'TensorFlow', 'OpenCV', 'FastAPI', 'REST APIs', 'Pandas', 'NumPy', 'Scikit-learn', 'SQL', 'Computer Vision', 'Data Analysis', 'Git', 'GitHub']
+2026-08-06 07:01:51 | DEBUG    | resume_ai.agent |   Min experience: 0.5 years
+2026-08-06 07:01:51 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] — sending request …
+2026-08-06 07:01:53 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] completed in 1678.9 ms — response 1033 chars
+2026-08-06 07:01:53 | DEBUG    | resume_ai.agent | JSON parse OK [extract_job_requirements] — 1033 chars
+2026-08-06 07:01:53 | INFO     | resume_ai.agent |   ✓ Extracted 16 core skills, min_exp=0.5 years
+2026-08-06 07:01:53 | INFO     | resume_ai.agent | ► Node: extract_candidate_profiles (3 resumes)
+2026-08-06 07:01:53 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 07:01:53 | INFO     | resume_ai.agent |   [1/3] Processing 'resume_exp.pdf' (2112 chars, truncated to 2112)
+2026-08-06 07:01:53 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] — sending request …
+2026-08-06 07:01:54 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] completed in 1677.4 ms — response 1533 chars
+2026-08-06 07:01:54 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:resume_exp.pdf] — 1533 chars
+2026-08-06 07:01:54 | INFO     | resume_ai.agent |     ✓ Name='DODDA VENKATA SAI MANVISH'  skills=15  exp=0 yrs
+2026-08-06 07:01:54 | INFO     | resume_ai.agent |   [2/3] Processing 'Kashyap_Resume.pdf' (5033 chars, truncated to 5033)
+2026-08-06 07:01:54 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] — sending request …
+2026-08-06 07:01:56 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] completed in 1710.8 ms — response 1762 chars
+2026-08-06 07:01:56 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Kashyap_Resume.pdf] — 1762 chars
+2026-08-06 07:01:56 | INFO     | resume_ai.agent |     ✓ Name='Siva Kashyap Chakravadhanula'  skills=33  exp=0.5 yrs
+2026-08-06 07:01:56 | INFO     | resume_ai.agent |   [3/3] Processing 'Resume_ATS.pdf' (3582 chars, truncated to 3582)
+2026-08-06 07:01:56 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] — sending request …
+2026-08-06 07:01:58 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] completed in 2025.2 ms — response 1979 chars
+2026-08-06 07:01:58 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Resume_ATS.pdf] — 1979 chars
+2026-08-06 07:01:58 | INFO     | resume_ai.agent |     ✓ Name='B Mouni Prakash Reddy'  skills=28  exp=0.2 yrs
+2026-08-06 07:01:58 | INFO     | resume_ai.agent |   ✓ All profiles extracted (3 total)
+2026-08-06 07:01:58 | INFO     | resume_ai.agent | ► Node: score_candidates (3 profiles)
+2026-08-06 07:01:58 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 07:01:58 | INFO     | resume_ai.agent |   [1/3] Scoring 'DODDA VENKATA SAI MANVISH' (resume_exp.pdf)
+2026-08-06 07:01:58 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] — sending request …
+2026-08-06 07:02:00 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] completed in 1744.6 ms — response 854 chars
+2026-08-06 07:02:00 | DEBUG    | resume_ai.agent | JSON parse OK [score:DODDA VENKATA SAI MANVISH] — 854 chars
+2026-08-06 07:02:00 | INFO     | resume_ai.agent |     ✓ score=35  recommendation='Not Recommended'  matching_skills=3
+2026-08-06 07:02:00 | INFO     | resume_ai.agent |   [2/3] Scoring 'Siva Kashyap Chakravadhanula' (Kashyap_Resume.pdf)
+2026-08-06 07:02:00 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] — sending request …
+2026-08-06 07:02:01 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] completed in 1313.9 ms — response 981 chars
+2026-08-06 07:02:01 | DEBUG    | resume_ai.agent | JSON parse OK [score:Siva Kashyap Chakravadhanula] — 981 chars
+2026-08-06 07:02:01 | INFO     | resume_ai.agent |     ✓ score=92  recommendation='Strong Fit'  matching_skills=16
+2026-08-06 07:02:01 | INFO     | resume_ai.agent |   [3/3] Scoring 'B Mouni Prakash Reddy' (Resume_ATS.pdf)
+2026-08-06 07:02:01 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] — sending request …
+2026-08-06 07:02:03 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] completed in 1378.5 ms — response 853 chars
+2026-08-06 07:02:03 | DEBUG    | resume_ai.agent | JSON parse OK [score:B Mouni Prakash Reddy] — 853 chars
+2026-08-06 07:02:03 | INFO     | resume_ai.agent |     ✓ score=62  recommendation='Fit'  matching_skills=9
+2026-08-06 07:02:03 | INFO     | resume_ai.agent |   ✓ All candidates scored (3 total)
+2026-08-06 07:02:03 | INFO     | resume_ai.agent | ► Node: rank_candidates
+2026-08-06 07:02:03 | INFO     | resume_ai.agent |   # 1  Siva Kashyap Chakravadhanula    score= 92  Strong Fit
+2026-08-06 07:02:03 | INFO     | resume_ai.agent |   # 2  B Mouni Prakash Reddy           score= 62  Fit
+2026-08-06 07:02:03 | INFO     | resume_ai.agent |   # 3  DODDA VENKATA SAI MANVISH       score= 35  Not Recommended
+2026-08-06 07:02:03 | INFO     | resume_ai.agent |   ✓ Ranking complete — top candidate: Siva Kashyap Chakravadhanula
+2026-08-06 07:02:03 | INFO     | resume_ai.agent | Graph invoke completed in 11680.1 ms
+2026-08-06 07:02:03 | INFO     | resume_ai.main | Agent finished in 11684.9 ms — 3 candidate(s) ranked
+2026-08-06 07:02:03 | INFO     | resume_ai.main |   #1 Siva Kashyap Chakravadhanula    score= 92  recommendation=Strong Fit
+2026-08-06 07:02:03 | INFO     | resume_ai.main |   #2 B Mouni Prakash Reddy           score= 62  recommendation=Fit
+2026-08-06 07:02:03 | INFO     | resume_ai.main |   #3 DODDA VENKATA SAI MANVISH       score= 35  recommendation=Not Recommended
+2026-08-06 07:02:03 | INFO     | resume_ai.main | ─── /evaluate complete ─────────────────────────────
+2026-08-06 07:02:03 | INFO     | resume_ai.main | ← POST /evaluate  status=200  11884.8 ms
+2026-08-06 07:38:31 | INFO     | resume_ai.main | → POST /evaluate  client=127.0.0.1
+2026-08-06 07:38:31 | INFO     | resume_ai.main | ─── /evaluate called ───────────────────────────────
+2026-08-06 07:38:31 | INFO     | resume_ai.main |   job_title        : Full Stack Developer
+2026-08-06 07:38:31 | INFO     | resume_ai.main |   min_experience   : 0.0 years
+2026-08-06 07:38:31 | INFO     | resume_ai.main |   required_skills  : We are looking for a skilled Full Stack Developer to build, maintain, and enhance scalable web applications. The ideal candidate should have experience with both frontend and backend development, strong problem-solving skills, and a passion for writing clean, efficient code.  Key Responsibilities:  Develop and maintain responsive web applications. Build RESTful APIs and backend services. Collaborate with designers and cross-functional teams. Write clean, scalable, and maintainable code. Troubleshoot, test, and optimize application performance.
+2026-08-06 07:38:31 | INFO     | resume_ai.main |   preferred_skills : AWS/Azure/GCP, Docker, Kubernetes, CI/CD pipelines, microservices architecture, GraphQL, testing frameworks (Jest/Cypress), Agile/Scrum methodologies, and DevOps practices.
+2026-08-06 07:38:31 | INFO     | resume_ai.main |   resume count     : 3
+2026-08-06 07:38:31 | INFO     | resume_ai.main |     file → resume_exp.pdf  content_type=application/pdf
+2026-08-06 07:38:31 | INFO     | resume_ai.main |     file → Kashyap_Resume.pdf  content_type=application/pdf
+2026-08-06 07:38:31 | INFO     | resume_ai.main |     file → Resume_ATS.pdf  content_type=application/pdf
+2026-08-06 07:38:31 | DEBUG    | resume_ai.main | Extracting text from 'resume_exp.pdf'  size=88767 bytes
+2026-08-06 07:38:31 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'resume_exp.pdf'  size=86.7 KB
+2026-08-06 07:38:31 | DEBUG    | resume_ai.extractor |   PDF 'resume_exp.pdf': 2 page(s)
+2026-08-06 07:38:31 | DEBUG    | resume_ai.extractor |     Page 1/2: 2063 chars
+2026-08-06 07:38:31 | DEBUG    | resume_ai.extractor |     Page 2/2: 48 chars
+2026-08-06 07:38:31 | DEBUG    | resume_ai.extractor | Extraction complete for 'resume_exp.pdf': 2112 chars extracted
+2026-08-06 07:38:31 | INFO     | resume_ai.main |   ✓ Extracted 2112 chars from 'resume_exp.pdf'
+2026-08-06 07:38:31 | DEBUG    | resume_ai.main | Extracting text from 'Kashyap_Resume.pdf'  size=199983 bytes
+2026-08-06 07:38:31 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Kashyap_Resume.pdf'  size=195.3 KB
+2026-08-06 07:38:31 | DEBUG    | resume_ai.extractor |   PDF 'Kashyap_Resume.pdf': 2 page(s)
+2026-08-06 07:38:32 | DEBUG    | resume_ai.extractor |     Page 1/2: 3420 chars
+2026-08-06 07:38:32 | DEBUG    | resume_ai.extractor |     Page 2/2: 1612 chars
+2026-08-06 07:38:32 | DEBUG    | resume_ai.extractor | Extraction complete for 'Kashyap_Resume.pdf': 5033 chars extracted
+2026-08-06 07:38:32 | INFO     | resume_ai.main |   ✓ Extracted 5033 chars from 'Kashyap_Resume.pdf'
+2026-08-06 07:38:32 | DEBUG    | resume_ai.main | Extracting text from 'Resume_ATS.pdf'  size=135829 bytes
+2026-08-06 07:38:32 | DEBUG    | resume_ai.extractor | extract_text_from_file: 'Resume_ATS.pdf'  size=132.6 KB
+2026-08-06 07:38:32 | DEBUG    | resume_ai.extractor |   PDF 'Resume_ATS.pdf': 1 page(s)
+2026-08-06 07:38:32 | DEBUG    | resume_ai.extractor |     Page 1/1: 3582 chars
+2026-08-06 07:38:32 | DEBUG    | resume_ai.extractor | Extraction complete for 'Resume_ATS.pdf': 3582 chars extracted
+2026-08-06 07:38:32 | INFO     | resume_ai.main |   ✓ Extracted 3582 chars from 'Resume_ATS.pdf'
+2026-08-06 07:38:32 | INFO     | resume_ai.main | Proceeding with 3 readable resume(s)
+2026-08-06 07:38:32 | INFO     | resume_ai.main | Starting LangGraph agent analysis …
+2026-08-06 07:38:32 | INFO     | resume_ai.agent | Initialising ResumeAnalysisAgent
+2026-08-06 07:38:32 | DEBUG    | resume_ai.agent | Building LangGraph …
+2026-08-06 07:38:32 | DEBUG    | resume_ai.agent | LangGraph compiled successfully
+2026-08-06 07:38:32 | INFO     | resume_ai.agent | ResumeAnalysisAgent.analyze — 3 candidate(s)
+2026-08-06 07:38:32 | INFO     | resume_ai.agent | ► Node: extract_job_requirements
+2026-08-06 07:38:32 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 07:38:32 | DEBUG    | resume_ai.agent |   Job title: Full Stack Developer
+2026-08-06 07:38:32 | DEBUG    | resume_ai.agent |   Required skills: ['We are looking for a skilled Full Stack Developer to build', 'maintain', 'and enhance scalable web applications. The ideal candidate should have experience with both frontend and backend development', 'strong problem-solving skills', 'and a passion for writing clean', 'efficient code.  Key Responsibilities:  Develop and maintain responsive web applications. Build RESTful APIs and backend services. Collaborate with designers and cross-functional teams. Write clean', 'scalable', 'and maintainable code. Troubleshoot', 'test', 'and optimize application performance.']
+2026-08-06 07:38:32 | DEBUG    | resume_ai.agent |   Min experience: 0.0 years
+2026-08-06 07:38:32 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] — sending request …
+2026-08-06 07:38:34 | DEBUG    | resume_ai.agent | LLM call [extract_job_requirements] completed in 1835.9 ms — response 770 chars
+2026-08-06 07:38:34 | DEBUG    | resume_ai.agent | JSON parse OK [extract_job_requirements] — 770 chars
+2026-08-06 07:38:34 | INFO     | resume_ai.agent |   ✓ Extracted 14 core skills, min_exp=0.0 years
+2026-08-06 07:38:34 | INFO     | resume_ai.agent | ► Node: extract_candidate_profiles (3 resumes)
+2026-08-06 07:38:34 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 07:38:34 | INFO     | resume_ai.agent |   [1/3] Processing 'resume_exp.pdf' (2112 chars, truncated to 2112)
+2026-08-06 07:38:34 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] — sending request …
+2026-08-06 07:38:36 | DEBUG    | resume_ai.agent | LLM call [extract_profile:resume_exp.pdf] completed in 2240.1 ms — response 1687 chars
+2026-08-06 07:38:36 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:resume_exp.pdf] — 1687 chars
+2026-08-06 07:38:36 | INFO     | resume_ai.agent |     ✓ Name='DODDA VENKATA SAI MANVISH'  skills=17  exp=0 yrs
+2026-08-06 07:38:36 | INFO     | resume_ai.agent |   [2/3] Processing 'Kashyap_Resume.pdf' (5033 chars, truncated to 5033)
+2026-08-06 07:38:36 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] — sending request …
+2026-08-06 07:38:38 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Kashyap_Resume.pdf] completed in 2146.5 ms — response 1935 chars
+2026-08-06 07:38:38 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Kashyap_Resume.pdf] — 1935 chars
+2026-08-06 07:38:38 | INFO     | resume_ai.agent |     ✓ Name='Siva Kashyap Chakravadhanula'  skills=31  exp=0.5 yrs
+2026-08-06 07:38:38 | INFO     | resume_ai.agent |   [3/3] Processing 'Resume_ATS.pdf' (3582 chars, truncated to 3582)
+2026-08-06 07:38:38 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] — sending request …
+2026-08-06 07:38:40 | DEBUG    | resume_ai.agent | LLM call [extract_profile:Resume_ATS.pdf] completed in 1731.8 ms — response 1523 chars
+2026-08-06 07:38:40 | DEBUG    | resume_ai.agent | JSON parse OK [extract_profile:Resume_ATS.pdf] — 1523 chars
+2026-08-06 07:38:40 | INFO     | resume_ai.agent |     ✓ Name='B Mouni Prakash Reddy'  skills=25  exp=0.2 yrs
+2026-08-06 07:38:40 | INFO     | resume_ai.agent |   ✓ All profiles extracted (3 total)
+2026-08-06 07:38:40 | INFO     | resume_ai.agent | ► Node: score_candidates (3 profiles)
+2026-08-06 07:38:40 | DEBUG    | resume_ai.agent | Initialising Gemini LLM (gemini-3.5-flash-lite)
+2026-08-06 07:38:40 | INFO     | resume_ai.agent |   [1/3] Scoring 'DODDA VENKATA SAI MANVISH' (resume_exp.pdf)
+2026-08-06 07:38:40 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] — sending request …
+2026-08-06 07:38:41 | DEBUG    | resume_ai.agent | LLM call [score:DODDA VENKATA SAI MANVISH] completed in 1715.0 ms — response 769 chars
+2026-08-06 07:38:41 | DEBUG    | resume_ai.agent | JSON parse OK [score:DODDA VENKATA SAI MANVISH] — 769 chars
+2026-08-06 07:38:41 | INFO     | resume_ai.agent |     ✓ score=62  recommendation='Fit'  matching_skills=6
+2026-08-06 07:38:41 | INFO     | resume_ai.agent |   [2/3] Scoring 'Siva Kashyap Chakravadhanula' (Kashyap_Resume.pdf)
+2026-08-06 07:38:41 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] — sending request …
+2026-08-06 07:38:43 | DEBUG    | resume_ai.agent | LLM call [score:Siva Kashyap Chakravadhanula] completed in 1323.4 ms — response 870 chars
+2026-08-06 07:38:43 | DEBUG    | resume_ai.agent | JSON parse OK [score:Siva Kashyap Chakravadhanula] — 870 chars
+2026-08-06 07:38:43 | INFO     | resume_ai.agent |     ✓ score=68  recommendation='Fit'  matching_skills=8
+2026-08-06 07:38:43 | INFO     | resume_ai.agent |   [3/3] Scoring 'B Mouni Prakash Reddy' (Resume_ATS.pdf)
+2026-08-06 07:38:43 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] — sending request …
+2026-08-06 07:38:44 | DEBUG    | resume_ai.agent | LLM call [score:B Mouni Prakash Reddy] completed in 1427.9 ms — response 872 chars
+2026-08-06 07:38:44 | DEBUG    | resume_ai.agent | JSON parse OK [score:B Mouni Prakash Reddy] — 872 chars
+2026-08-06 07:38:44 | INFO     | resume_ai.agent |     ✓ score=85  recommendation='Strong Fit'  matching_skills=9
+2026-08-06 07:38:44 | INFO     | resume_ai.agent |   ✓ All candidates scored (3 total)
+2026-08-06 07:38:44 | INFO     | resume_ai.agent | ► Node: rank_candidates
+2026-08-06 07:38:44 | INFO     | resume_ai.agent |   # 1  B Mouni Prakash Reddy           score= 85  Strong Fit
+2026-08-06 07:38:44 | INFO     | resume_ai.agent |   # 2  Siva Kashyap Chakravadhanula    score= 68  Fit
+2026-08-06 07:38:44 | INFO     | resume_ai.agent |   # 3  DODDA VENKATA SAI MANVISH       score= 62  Fit
+2026-08-06 07:38:44 | INFO     | resume_ai.agent |   ✓ Ranking complete — top candidate: B Mouni Prakash Reddy
+2026-08-06 07:38:44 | INFO     | resume_ai.agent | Graph invoke completed in 12550.1 ms
+2026-08-06 07:38:44 | INFO     | resume_ai.main | Agent finished in 12564.2 ms — 3 candidate(s) ranked
+2026-08-06 07:38:44 | INFO     | resume_ai.main |   #1 B Mouni Prakash Reddy           score= 85  recommendation=Strong Fit
+2026-08-06 07:38:44 | INFO     | resume_ai.main |   #2 Siva Kashyap Chakravadhanula    score= 68  recommendation=Fit
+2026-08-06 07:38:44 | INFO     | resume_ai.main |   #3 DODDA VENKATA SAI MANVISH       score= 62  recommendation=Fit
+2026-08-06 07:38:44 | INFO     | resume_ai.main | ─── /evaluate complete ─────────────────────────────
+2026-08-06 07:38:44 | INFO     | resume_ai.main | ← POST /evaluate  status=200  12947.8 ms
