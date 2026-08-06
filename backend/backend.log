@@ -466,3 +466,4 @@
 2026-08-06 07:38:44 | INFO     | resume_ai.main |   #3 DODDA VENKATA SAI MANVISH       score= 62  recommendation=Fit
 2026-08-06 07:38:44 | INFO     | resume_ai.main | ─── /evaluate complete ─────────────────────────────
 2026-08-06 07:38:44 | INFO     | resume_ai.main | ← POST /evaluate  status=200  12947.8 ms
+2026-08-06 09:37:03 | INFO     | resume_ai.main | Starting Resume AI Analyzer backend on http://0.0.0.0:8000

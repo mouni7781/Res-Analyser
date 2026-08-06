@@ -6,8 +6,8 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/evaluate': 'http://localhost:8000',
-      '/health': 'http://localhost:8000',
+      '/evaluate': 'https://res-analyser-jksg.onrender.com/evaluate',
+      '/health': 'https://res-analyser-jksg.onrender.com/health',
     },
   },
 })
